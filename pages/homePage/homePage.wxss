@@ -1,0 +1,31 @@
+/* pages/homePage/homePage.wxss */
+.calendar {
+  --calendar-height: 1200rpx;
+}
+
+/* 入住日 - 绿色背景 */
+.check-in-day {
+  background: #4caf50 !important;
+  /* 绿色 */
+  color: white !important;
+}
+
+/* 离店日 - 红色背景 */
+.check-out-day {
+  background: #f44336 !important;
+  /* 红色 */
+  color: white !important;
+}
+
+/* 居住中 - 浅灰色背景 */
+.in-stay-range {
+  background: #e0e0e0 !important;
+  color: #333 !important;
+}
+
+/* 可选：让文字更清晰 */
+.check-in-day .van-calendar__day,
+.check-out-day .van-calendar__day,
+.in-stay-range .van-calendar__day {
+  color: inherit !important;
+}
