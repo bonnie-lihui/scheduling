@@ -39,7 +39,7 @@ Page({
       });
 
       // 例如：17(夜)、18(白) → 19、20、21(休) → 22(夜)、23(白)
-      currentStart = currentStart.add(3, 'day');
+      currentStart = currentStart.add(4, 'day');
     }
     this.setData({
       selectedRanges,
@@ -64,9 +64,9 @@ Page({
 
         // 设置底部文字
         if (isStart) {
-          day.bottomInfo = '上班';
+          day.bottomInfo = '夜班';
         } else if (isEnd) {
-          day.bottomInfo = '下班';
+          day.bottomInfo = '白班';
         }
 
         // 添加类名用于自定义样式
@@ -107,5 +107,12 @@ Page({
   onLoad() {
     this.calculationPeriod()
     this.setFormatter()
+  },
+
+  onShareAppMessage() {
+    return {
+      userName: '排班计算',
+      path: 'pages/homePage/homePage',
+    }
   }
 });

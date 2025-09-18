@@ -1,13 +1,23 @@
 /* pages/homePage/homePage.wxss */
+
+.app {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
 .calendar {
   --calendar-height: 1200rpx;
 }
 
+.van-calendar__selected-day{
+  border-radius: 0 !important;
+}
 /* 入住日 - 绿色背景 */
 .check-in-day {
-  background: #4caf50 !important;
+  background: #f44336 !important;
+  /* background: #4caf50 !important; */
   /* 绿色 */
-  color: white !important;
+  color: #000 !important;
 }
 
 /* 离店日 - 红色背景 */

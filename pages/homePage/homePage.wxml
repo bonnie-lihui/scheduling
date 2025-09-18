@@ -1,13 +1,16 @@
 <!--pages/homePage/homePage.wxml-->
+<view class="app">
 
-<view>
-  上次上班日期: {{ lastWorkingDay }}
-  <van-button round type="danger" bind:tap="onSwitchStatus">切换</van-button>
+  <view style='margin-bottom: 30rpx;'>
+    上次上班日期: {{ lastWorkingDay }}
+    <van-button custom-style='margin-left: 30rpx;height: 65rpx;border-radius: 20rpx;' color='#DBB4FD' type="danger" bind:tap="onSwitchStatus">切换</van-button>
+  </view>
+
+  <van-calendar show="{{ show }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" first-day-of-week="{{ 1 }}" bind:close="onSwitchStatus" bind:confirm="onConfirm" />
+
+
+
+  <!-- 平铺开的日历 -->
+  <van-calendar title="排班表" readonly='"true"' min-date="{{ minDate }}" max-date="{{ maxDate }}" formatter="{{ formatter }}" color="#4caf50" first-day-of-week="{{ 1 }}" poppable="{{ false }}" show-confirm="{{ false }}" class="calendar" />
+  <!--  -->
 </view>
-
-<van-calendar show="{{ show }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:close="onSwitchStatus" bind:confirm="onConfirm" />
-
-
-
-<!-- 平铺开的日历 -->
-<van-calendar title="排班表" readonly='"true"' min-date="{{ minDate }}" max-date="{{ maxDate }}" formatter="{{ formatter }}" poppable="{{ false }}" show-confirm="{{ false }}" class="calendar" />

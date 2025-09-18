@@ -4,7 +4,7 @@
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "排班表计算",
     "navigationBarBackgroundColor": "#ffffff"
   },
   "componentFramework": "glass-easel",
